@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bruce Zhang | Research Portfolio</title>
+    <title>Bruce Zhang | Portfolio</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -20,14 +22,17 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1050px;
             margin: auto;
             padding: 0 30px;
         }
 
+
+        /* Navigation */
+
         nav {
             padding: 25px 0;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #eeeeee;
         }
 
         nav .container {
@@ -45,323 +50,515 @@
             margin-left: 25px;
             text-decoration: none;
             color: #555;
+            font-size: 15px;
         }
 
         nav a:hover {
             color: #000;
         }
 
+
+        /* Hero */
+
         .hero {
-            padding: 90px 0 70px;
+            padding: 100px 0 80px;
         }
 
         .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
+            font-size: 52px;
+            margin: 0 0 10px 0;
+            letter-spacing: -1px;
         }
 
         .hero h2 {
             font-size: 22px;
             font-weight: normal;
             color: #666;
-            margin-bottom: 25px;
+            margin: 0 0 25px 0;
         }
 
         .hero p {
             max-width: 700px;
             color: #555;
+            font-size: 17px;
         }
 
-        .links a {
-            display: inline-block;
-            margin-right: 20px;
-            margin-top: 20px;
-            color: #111;
-            text-decoration: none;
-            font-weight: bold;
+
+        /* Projects */
+
+        .projects-section {
+            padding: 70px 0;
+            border-top: 1px solid #eeeeee;
         }
 
-        section {
-            padding: 60px 0;
-            border-top: 1px solid #eee;
-        }
-
-        section h2 {
-            font-size: 28px;
-            margin-bottom: 30px;
-        }
-
-        .research-item {
-            margin-bottom: 35px;
-        }
-
-        .research-item h3 {
-            margin-bottom: 5px;
-            font-size: 21px;
-        }
-
-        .research-item p {
-            color: #555;
-            max-width: 800px;
-        }
-
-        .tags {
-            color: #777;
-            font-size: 14px;
+        .projects-section h2 {
+            font-size: 30px;
+            margin-bottom: 40px;
         }
 
         .project-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
+            gap: 35px;
         }
 
+
+        /* Project Card */
+
         .project {
-            border: 1px solid #ddd;
-            padding: 25px;
-            border-radius: 8px;
-            transition: 0.2s;
+            border: 1px solid #dddddd;
+            border-radius: 10px;
+            overflow: hidden;
+            background: #ffffff;
+            transition: 0.25s ease;
         }
 
         .project:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+
+        /* Project Image */
+
+        .project-image {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        /* Project Content */
+
+        .project-content {
+            padding: 25px;
         }
 
         .project h3 {
-            margin-top: 0;
+            margin: 0 0 10px 0;
+            font-size: 21px;
+        }
+
+        .project p {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 20px;
         }
 
         .project a {
             text-decoration: none;
             color: #111;
             font-weight: bold;
+            font-size: 14px;
         }
+
+        .project a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* Contact */
+
+        .contact {
+            padding: 70px 0;
+            border-top: 1px solid #eeeeee;
+        }
+
+        .contact h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .contact a {
+            color: #222;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* Footer */
 
         footer {
             padding: 40px 0;
-            color: #777;
+            border-top: 1px solid #eeeeee;
+            color: #888;
             font-size: 14px;
             text-align: center;
         }
 
-        @media (max-width: 700px) {
-            .project-grid {
-                grid-template-columns: 1fr;
-            }
 
-            .hero h1 {
-                font-size: 38px;
-            }
+        /* Mobile */
+
+        @media (max-width: 700px) {
 
             nav .container {
                 flex-direction: column;
                 gap: 15px;
             }
+
+            nav a {
+                margin: 0 10px;
+            }
+
+            .hero {
+                padding: 70px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 19px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-image {
+                height: 210px;
+            }
         }
+
     </style>
+
 </head>
+
 
 <body>
 
+
+<!-- Navigation -->
+
 <nav>
+
     <div class="container">
-        <div class="logo">Bruce Zhang</div>
+
+        <div class="logo">
+            Bruce Zhang
+        </div>
 
         <div>
-            <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#projects">
+                Projects
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
         </div>
+
     </div>
+
 </nav>
 
 
-<header class="hero">
+
+<!-- Hero -->
+
+<header class="hero" id="about">
+
     <div class="container">
 
-        <h1>Bruce Zhang</h1>
+        <h1>
+            Bruce Zhang
+        </h1>
 
         <h2>
-            Computer Graphics · Virtual Reality · Computer Vision
+            VR · Unity · Game Development
         </h2>
 
         <p>
-            Master's student and researcher interested in computer graphics,
-            virtual reality, computer vision, and real-time rendering.
+            I am passionate about virtual reality, Unity development,
+            and interactive experiences. My projects also include
+            computer vision and real-time rendering.
         </p>
 
-        <div class="links">
-            <a href="YOUR_GITHUB_URL" target="_blank">GitHub</a>
-            <a href="YOUR_LINKEDIN_URL" target="_blank">LinkedIn</a>
-            <a href="YOUR_CV_URL" target="_blank">CV</a>
-        </div>
-
     </div>
+
 </header>
 
 
-<section id="about">
+
+<!-- Projects -->
+
+<section class="projects-section" id="projects">
+
     <div class="container">
 
-        <h2>About</h2>
+        <h2>
+            Projects
+        </h2>
 
-        <p>
-            My research interests lie at the intersection of
-            computer graphics, virtual reality, and computer vision.
-            I am particularly interested in real-time rendering,
-            immersive interaction, and GPU-based graphics techniques.
-        </p>
-
-    </div>
-</section>
-
-
-<section id="research">
-    <div class="container">
-
-        <h2>Research</h2>
-
-        <div class="research-item">
-
-            <h3>
-                VR Music Player for Meta Quest 3
-            </h3>
-
-            <p>
-                Developed a VR-based music player focusing on
-                spatialized 3D UI, gesture-based interaction,
-                and immersive music visualization.
-            </p>
-
-            <div class="tags">
-                Unity · Meta Quest 3 · Meta XR SDK · VR · HCI
-            </div>
-
-        </div>
-
-
-        <div class="research-item">
-
-            <h3>
-                GPU-based 3D Oriental Color-Ink Rendering
-            </h3>
-
-            <p>
-                Investigated GPU-based real-time rendering techniques
-                for reproducing the visual characteristics of
-                traditional Oriental color-ink painting.
-            </p>
-
-            <div class="tags">
-                Computer Graphics · GPU · Real-time Rendering
-            </div>
-
-        </div>
-
-
-        <div class="research-item">
-
-            <h3>
-                Image Segmentation with YOLO and CRFs
-            </h3>
-
-            <p>
-                Investigated refinement techniques for coarse image
-                segmentation annotations using YOLO-based segmentation
-                and Conditional Random Fields.
-            </p>
-
-            <div class="tags">
-                Computer Vision · YOLO · CRF · Image Segmentation
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-
-<section id="projects">
-    <div class="container">
-
-        <h2>Projects</h2>
 
         <div class="project-grid">
 
+
+            <!-- Project 1 -->
+
             <div class="project">
-                <h3>VR Meeting Room</h3>
-                <p>
-                    Collaborative VR environment developed using Unity
-                    with interactive spatial interfaces.
-                </p>
-                <a href="YOUR_PROJECT_URL">
-                    View Project →
-                </a>
+
+                <img
+                    src="images/vr-music-player.jpg"
+                    alt="VR Music Player"
+                    class="project-image"
+                >
+
+                <div class="project-content">
+
+                    <h3>
+                        VR Music Player
+                    </h3>
+
+                    <p>
+                        A VR music player developed for Meta Quest 3,
+                        featuring spatial 3D interfaces and natural
+                        hand-based interaction.
+                    </p>
+
+                    <a
+                        href="YOUR_VIDEO_LINK"
+                        target="_blank"
+                    >
+                        View Project →
+                    </a>
+
+                </div>
+
             </div>
 
 
+
+            <!-- Project 2 -->
+
             <div class="project">
-                <h3>NLP and MIDI Music Generation</h3>
-                <p>
-                    Machine learning project exploring sequence modeling
-                    for symbolic music generation.
-                </p>
-                <a href="YOUR_PROJECT_URL">
-                    View Project →
-                </a>
+
+                <img
+                    src="images/vr-meeting-room.jpg"
+                    alt="VR Meeting Room"
+                    class="project-image"
+                >
+
+                <div class="project-content">
+
+                    <h3>
+                        VR Meeting Room
+                    </h3>
+
+                    <p>
+                        A collaborative virtual reality environment
+                        developed with Unity, focusing on immersive
+                        interaction and spatial UI.
+                    </p>
+
+                    <a
+                        href="YOUR_VIDEO_LINK"
+                        target="_blank"
+                    >
+                        View Project →
+                    </a>
+
+                </div>
+
             </div>
 
 
+
+            <!-- Project 3 -->
+
             <div class="project">
-                <h3>Underwater Marine Life Scene</h3>
-                <p>
-                    Computer graphics project focusing on real-time
-                    rendering of an underwater environment.
-                </p>
-                <a href="YOUR_PROJECT_URL">
-                    View Project →
-                </a>
+
+                <img
+                    src="images/fps-game.jpg"
+                    alt="First Person Shooter Game"
+                    class="project-image"
+                >
+
+                <div class="project-content">
+
+                    <h3>
+                        First-Person Shooter Game
+                    </h3>
+
+                    <p>
+                        A 3D first-person shooter game developed during
+                        my undergraduate studies, involving gameplay
+                        systems, interaction, and environment design.
+                    </p>
+
+                    <a
+                        href="YOUR_VIDEO_LINK"
+                        target="_blank"
+                    >
+                        View Project →
+                    </a>
+
+                </div>
+
             </div>
 
 
+
+            <!-- Project 4 -->
+
             <div class="project">
-                <h3>First-Person Shooter Game</h3>
-                <p>
-                    Undergraduate game development project involving
-                    gameplay systems, interaction, and 3D environments.
-                </p>
-                <a href="YOUR_PROJECT_URL">
-                    View Project →
-                </a>
+
+                <img
+                    src="images/oriental-ink.jpg"
+                    alt="Oriental Color-Ink Rendering"
+                    class="project-image"
+                >
+
+                <div class="project-content">
+
+                    <h3>
+                        GPU-based 3D Oriental Color-Ink Rendering
+                    </h3>
+
+                    <p>
+                        A real-time rendering project exploring GPU-based
+                        techniques for reproducing the visual characteristics
+                        of traditional Oriental color-ink painting.
+                    </p>
+
+                    <a
+                        href="YOUR_VIDEO_LINK"
+                        target="_blank"
+                    >
+                        View Project →
+                    </a>
+
+                </div>
+
             </div>
+
+
+
+            <!-- Project 5 -->
+
+            <div class="project">
+
+                <img
+                    src="images/image-segmentation.jpg"
+                    alt="Image Segmentation"
+                    class="project-image"
+                >
+
+                <div class="project-content">
+
+                    <h3>
+                        Image Segmentation with YOLO and CRFs
+                    </h3>
+
+                    <p>
+                        A computer vision project investigating refinement
+                        of coarse image segmentation using YOLO-based
+                        segmentation and Conditional Random Fields.
+                    </p>
+
+                    <a
+                        href="YOUR_VIDEO_LINK"
+                        target="_blank"
+                    >
+                        View Project →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Project 6 -->
+
+            <div class="project">
+
+                <img
+                    src="images/midi-generation.jpg"
+                    alt="MIDI Music Generation"
+                    class="project-image"
+                >
+
+                <div class="project-content">
+
+                    <h3>
+                        NLP and MIDI Music Generation
+                    </h3>
+
+                    <p>
+                        A machine learning project exploring sequence
+                        modeling for symbolic music generation using
+                        MIDI data.
+                    </p>
+
+                    <a
+                        href="YOUR_VIDEO_LINK"
+                        target="_blank"
+                    >
+                        View Project →
+                    </a>
+
+                </div>
+
+            </div>
+
 
         </div>
 
     </div>
+
 </section>
 
 
-<section id="contact">
+
+<!-- Contact -->
+
+<section class="contact" id="contact">
+
     <div class="container">
 
-        <h2>Contact</h2>
+        <h2>
+            Contact
+        </h2>
 
         <p>
-            Email:
+            Feel free to contact me at
             <a href="mailto:YOUR_EMAIL">
                 YOUR_EMAIL
             </a>
         </p>
 
     </div>
+
 </section>
 
 
+
+<!-- Footer -->
+
 <footer>
-    © 2026 Bruce Zhang
+
+    <div class="container">
+
+        © 2026 Bruce Zhang
+
+    </div>
+
 </footer>
 
+
 </body>
+
 </html>
+```
