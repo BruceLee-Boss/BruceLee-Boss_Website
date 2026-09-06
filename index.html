@@ -60,30 +60,56 @@
 
         /* Hero */
 
-        .hero {
-            padding: 100px 0 80px;
-        }
+       /* Hero */
 
-        .hero h1 {
-            font-size: 52px;
-            margin: 0 0 10px 0;
-            letter-spacing: -1px;
-        }
+.hero {
+    padding: 100px 0 80px;
+}
 
-        .hero h2 {
-            font-size: 22px;
-            font-weight: normal;
-            color: #666;
-            margin: 0 0 25px 0;
-        }
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+}
 
-        .hero p {
-            max-width: 720px;
-            color: #555;
-            font-size: 17px;
-        }
+.hero-text {
+    flex: 1;
+}
 
+.hero h1 {
+    font-size: 52px;
+    margin: 0 0 10px 0;
+    letter-spacing: -1px;
+}
 
+.hero h2 {
+    font-size: 22px;
+    font-weight: normal;
+    color: #666;
+    margin: 0 0 25px 0;
+}
+
+.hero p {
+    max-width: 720px;
+    color: #555;
+    font-size: 17px;
+}
+
+.hero-photo {
+    flex: 0 0 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-photo img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
         /* Projects */
 
         .projects-section {
@@ -191,39 +217,58 @@
         }
 
 
-        /* Mobile */
+/* Mobile */
 
-        @media (max-width: 700px) {
+@media (max-width: 700px) {
 
-            nav .container {
-                flex-direction: column;
-                gap: 15px;
-            }
+    nav .container {
+        flex-direction: column;
+        gap: 15px;
+    }
 
-            nav a {
-                margin: 0 10px;
-            }
+    nav a {
+        margin: 0 10px;
+    }
 
-            .hero {
-                padding: 70px 0 60px;
-            }
+    .hero {
+        padding: 70px 0 60px;
+    }
 
-            .hero h1 {
-                font-size: 40px;
-            }
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
 
-            .hero h2 {
-                font-size: 19px;
-            }
+    .hero-text {
+        width: 100%;
+    }
 
-            .project-grid {
-                grid-template-columns: 1fr;
-            }
+    .hero h1 {
+        font-size: 40px;
+    }
 
-            .project-image {
-                height: 210px;
-            }
-        }
+    .hero h2 {
+        font-size: 19px;
+    }
+
+    .hero-photo {
+        flex: none;
+    }
+
+    .hero-photo img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 210px;
+    }
+}
 
     </style>
 
@@ -293,7 +338,7 @@
             </div>
 
             <div class="hero-photo">
-                <img src="images/Fitst Mountain Paragliding.jpg "alt="Bruce Zhang">
+                <img src="images/Fitst Mountain Paragliding.jpg" alt="Bruce Zhang">
             </div>
 
         </div>
